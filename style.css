@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Sniglet&display=swap');
+
+#options{
+  width: 60%;
+}
+
+.parent{
+  display: block;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top {
+  display: block;
+  margin: 0;
+  border: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #99ffff;
+}
+
+.base, .ingredients {
+  margin: 0;
+  border: 0;
+  text-align: center;
+  font-family: Sniglet, cursive;
+  font-size: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #00ffff;
+  color: #ffff;
+}
+
+.ingredients{
+  padding-top: 5px;
+  background-color: #ffd24d;
+}
+
+#options img {
+  height: 50%;
+  width: 100%;
+}
+
+.bottom {
+  display: block;
+  margin: 0;
+  border: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #ffdf80;
+}
+
+.inline {
+  float: left;
+}
+
+#bottle {
+  position: relative;
+  overflow: hidden;
+  max-height: 670px;
+}
+
+.opt {
+  font-family: Sniglet, cursive;
+  font-size: 20px;
+  padding: 20px;
+  padding-right: 50px;
+  background-color: red;
+}
+
+#alc-range, .btn {
+  display: none;
+}
+
+span {
+  color: red;
+}
+
+.control {
+  font-family: Sniglet, cursive;
+  text-align: center;
+  position: absolute;
+  left: inherit;
+  top: 45%;
+}
+
+.control button {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+body {
+  font-family: Sniglet, cursive;
+}
+
+.submit-content {
+  text-align: center;
+  background-color: #ffdf80;
+  color: darkturquoise;
+  font-size: 50px;
+}
