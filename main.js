@@ -37,8 +37,11 @@ function alc() {
   var inp = document.getElementById('alc-range');
   var btn = document.getElementsByClassName('btn');
   if (cbox.checked == true) {
-    inp.style.display = 'inline';
-    btn[0].style.display = 'inline';
+    var r = confirm("Press OK if you are 18+");
+    if(r == true) {
+      inp.style.display = 'inline';
+      btn[0].style.display = 'inline';
+    }
   } else{
     inp.style.display = 'none';
     btn[0].style.display = 'none';

@@ -20,10 +20,7 @@ function getOrder(){
   b = ((b==0) ? '' : b);
   div[0].innerHTML += '<h3 style=\'margin-top: 20px; margin-bottom: 0px;\'>Base:</h3> ' + b + '<h3 style=\'margin-top: 20px; margin-bottom: 0px;\'>Ingredients: </h3>' + ingredients;
 
-  if(b == '') {
-    window.location.href = 'index.html?e';
-  }
-  if(i1[1] == '') {
+  if(b == '' || i1[1] == '') {
     window.location.href = 'index.html?e';
   }
 }
