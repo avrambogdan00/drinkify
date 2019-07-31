@@ -34,7 +34,8 @@ function addImg(value, type, id) {
 
 function alc() {
   if (document.cookie == '') {
-    document.cookie = 'over18=';
+    d = new Date();
+    document.cookie = 'over18=;expires=' + d.getTime() + 2592000000;
   }
   var cbox = document.getElementById('alcohol');
   var inp = document.getElementById('alc-range');
