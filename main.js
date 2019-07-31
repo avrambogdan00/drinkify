@@ -41,6 +41,7 @@ function alc() {
     if(r == true) {
       inp.style.display = 'inline';
       btn[0].style.display = 'inline';
+      cbox.checked = false;
     }
   } else{
     inp.style.display = 'none';
