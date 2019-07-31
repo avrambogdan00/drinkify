@@ -12,9 +12,9 @@ function getOrder(){
   var i3 = queries[2].split('='); ingredients = ((i3[1]=='') ? ingredients : ingredients + possibleIng[i3[1]] + '<br>');
   var i4 = queries[3].split('='); ingredients = ((i4[1]=='') ? ingredients : ingredients + possibleIng[i4[1]] + '<br>');
   var b = queries[4].split('='); b = b[1]; b = ((b==0) ? '' : b);
-  var alc = queries[5].split('='); alc = alc[1]+'%';
+  var alc = queries[5].split('='); alc = alc[1];
   if (alc != '') {
-    div[0].innerHTML = 'Alcohol: ' + alc;
+    div[0].innerHTML = 'Alcohol: ' + alc + '%';
   }
 
   b = ((b==0) ? '' : b);
