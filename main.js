@@ -58,7 +58,6 @@ function alc() {
       v.style.display = 'inline';
     }
   } else{
-    document.cookie = 'over18=false';
     inp.style.display = 'none';
     btn[0].style.display = 'none';
     v.style.display = 'none';
