@@ -57,9 +57,8 @@
       <input type="hidden" value="" name="b">
       <input type="hidden" value="" name="alc">
       <button type="submit" value="Submit">Submit</button>
-      <button type="reset" onclick="location.reload()" name="Reset">Reset</button>
+      <button type="reset" onclick="window.location.href = 'index.html'" name="Reset">Reset</button>
     </form>
-    <span id="err" style='display: none;'>Choose at least one ingredient and one base.</span>
     <section class="inline" id="bottle">
       <img class="bottle" src="images/simpleMixerBtl.png">
       <div id="i1"></div>
@@ -68,6 +67,7 @@
       <div id="i4"></div>
       <div id="b"></div>
     </section>
+    <span id="err" style='display: none;'>Choose at least one ingredient and one base.</span>
   </div>
 </body>
 </html>

@@ -75,6 +75,8 @@
 
 span {
   color: red;
+  top: 51%;
+  position: fixed;
 }
 
 .control {
