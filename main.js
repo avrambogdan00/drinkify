@@ -33,20 +33,33 @@ function addImg(value, type, id) {
 
 
 function alc() {
+  if (document.cookie == '') {
+    document.cookie = 'over18=';
+  }
   var cbox = document.getElementById('alcohol');
   var inp = document.getElementById('alc-range');
   var btn = document.getElementsByClassName('btn');
+  var v = document.getElementById('slider-value');
   if (cbox.checked == true) {
-    var r = confirm("Press OK if you are 18+");
-    if(r == true) {
+    if(document.cookie == 'over18=') {
+      var r = confirm("Press OK if you are 18+");
+      if(r == true) {
+        inp.style.display = 'inline';
+        btn[0].style.display = 'inline';
+        v.style.display = 'inline';
+        document.cookie = 'over18=true';
+      } else {
+        cbox.checked = false;
+      }
+    } else if (document.cookie == 'over18=true') {
       inp.style.display = 'inline';
       btn[0].style.display = 'inline';
-    } else {
-      cbox.checked = false;
+      v.style.display = 'inline';
     }
   } else{
     inp.style.display = 'none';
     btn[0].style.display = 'none';
+    v.style.display = 'none';
   }
 }
 
