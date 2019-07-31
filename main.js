@@ -41,7 +41,7 @@ function alc() {
   var btn = document.getElementsByClassName('btn');
   var v = document.getElementById('slider-value');
   if (cbox.checked == true) {
-    if(document.cookie == 'over18=') {
+    if(document.cookie == 'over18=' || document.cookie == 'over18=false') {
       var r = confirm("Press OK if you are 18+");
       if(r == true) {
         inp.style.display = 'inline';
