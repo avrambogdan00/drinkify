@@ -23,7 +23,7 @@ function addImg(value, type, id) {
 
         var input = document.getElementsByName('i'+(i+1));
         input[0].value = id;
-        console.log(id);
+        console.log(id); 
 
         break;
       }
@@ -41,6 +41,7 @@ function alc() {
     if(r == true) {
       inp.style.display = 'inline';
       btn[0].style.display = 'inline';
+    } else {
       cbox.checked = false;
     }
   } else{
