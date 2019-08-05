@@ -49,23 +49,26 @@
 
     <section id="bottle">
       <img class="bottle" src="images/simpleMixerBtl.png">
-<button class="prev" type="button"><</button>
-      <div class="car">
-      <ul>
-        <li class="i1"><img src="images/ice.jpg"></li>
-        <li class="i2"><img src="images/lemon.jpg"></li>
-        <li class="i3"><img src="images/banana.jpg"></li>
-        <li class="i4"><img src="images/coconut.jpg"></li>
-      </ul>
+      <div class="car active">
+        <div class="buttons">
+          <button class="prev">
+            ◀ <span class="offscreen">Previous</span>
+          </button>
+          <button class="next">
+            <span class="offscreen">Next</span> ▶
+          </button>
+        </div>
+        <ol class="content">
+          <li><img src="C:/Users/practica/Documents/GitHub/reea-practica/images/ice.jpg"></li>
+          <li><img src="C:/Users/practica/Documents/GitHub/reea-practica/images/lemon.jpg"></li>
+          <li><img src="C:/Users/practica/Documents/GitHub/reea-practica/images/banana.jpg"></li>
+          <li><img src="C:/Users/practica/Documents/GitHub/reea-practica/images/coconut.jpg"></li>
+        </ol>
       </div>
-      <button class="next" type="button">></button>
       <div id="b"></div>
 
     </section>
-
-    <span id="err" style='display: none;'>
-      Choose at least one ingredient and one base.
-    </span>
+    <span id="err" style='display: none;'>Choose at least one ingredient and one base.</span>
   </div>
 </body>
 </html>
