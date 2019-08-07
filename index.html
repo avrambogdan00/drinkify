@@ -6,40 +6,31 @@
   <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
-  <div class="parent">
-
-    <section id="options">
-      
-      <div class="top">
-        <img class="cola" onclick="addImg('images/cola1.jpg', 0, 'cola');" src="images/cola.png">
-        <img onclick="addImg('images/pepsi.jpg', 0, 'pepsi');" src="images/pepsi.png">
-        <img onclick="addImg('images/fanta1.jpg', 0, 'fanta');" src="images/fanta.png">
-        <img onclick="addImg('images/scwh1.jpg', 0, 'schweppes');" src="images/schweppes.jpg">
+  <div onload="checkforerrors()" class="parent">
+    
+    <div id="bottle">
+      <img class="bottle" src="images/simpleMixerBtl.png"/>
+      <div class="car active">
+        <button class="prev">
+          ◀ <span class="offscreen">Previous</span>
+        </button>
+        <ol class="content">
+          <li><img src="images/ice.jpg"></li>
+          <li><img src="images/lemon.jpg"></li>
+          <li><img src="images/banana.jpg"></li>
+          <li><img src="images/coconut.jpg"></li>
+        </ol>
+        <button class="next">
+          <span class="offscreen">Next</span> ▶
+        </button>
+        <button type="button" id="submit">Continue</button>
       </div>
+      <div id="b"></div>
 
-      <div class="bottom">
-        <img onclick="addImg('images/ice.jpg', 1, 0);" src="images/ice.jpg">
-        <img onclick="addImg('images/lemon.jpg', 1, 1);" src="images/lemon.jpg">
-        <img onclick="addImg('images/coconut.jpg', 1, 2);" src="images/coconut.jpg">
-        <img onclick="addImg('images/banana.jpg', 1, 3);" src="images/banana.jpg">
-      </div>
-
-      <div class="opt">
-
-        <input onclick="alc()" type="checkbox" id="alcohol">Alcohol</input>
-        <input oninput="document.getElementById('slider-value').innerHTML = this.value + '%'" class="slider" type="range" id="alc-range" value="5" min="0" max="50">
-
-        <input type="button" class="btn" value="Submit" onclick="document.getElementsByName('alc')[0].value = document.getElementById('alc-range').value;">
-        <span id="slider-value">5%</span>
-      </div>
-
-    </section>
+    </div>
 
     <form style="display: none" action="submit.html" method="GET" class="control">
-      <input type="hidden" value="" name="i1">
-      <input type="hidden" value="" name="i2">
-      <input type="hidden" value="" name="i3">
-      <input type="hidden" value="" name="i4">
+      <input type="hidden" value="" name="ing">
       <input type="hidden" value="" name="b">
       <input type="hidden" value="" name="alc">
       <button type="submit" value="Submit">Submit</button>
@@ -47,25 +38,13 @@
       <button type="button" onclick='document.cookie = "over18="; window.location.href="index.html"'>Reset Cookies</button>
     </form>
 
-    <section id="bottle">
-      <img class="bottle" src="images/simpleMixerBtl.png"/>
-      <div class="car active">
-        <button class="prev">
-          ◀ <span class="offscreen">Previous</span>
-        </button>
-        <ol class="content">
-          <li><img src="C:/Users/practica/Documents/GitHub/reea-practica/images/ice.jpg"></li>
-          <li><img src="C:/Users/practica/Documents/GitHub/reea-practica/images/lemon.jpg"></li>
-          <li><img src="C:/Users/practica/Documents/GitHub/reea-practica/images/banana.jpg"></li>
-          <li><img src="C:/Users/practica/Documents/GitHub/reea-practica/images/coconut.jpg"></li>
-        </ol>
-        <button class="next">
-          <span class="offscreen">Next</span> ▶
-        </button>
-      </div>
-      <div id="b"></div>
+    <div class="opt">
+      <input onclick="alc()" type="checkbox" id="alcohol">Alcohol</input>
+      <input oninput="document.getElementById('slider-value').innerHTML = this.value + '%'" class="slider" type="range" id="alc-range" value="5" min="0" max="50">
+      <input type="button" class="btn" value="Submit" onclick="document.getElementsByName('alc')[0].value = document.getElementById('alc-range').value;">
+      <span id="slider-value">5%</span>
+    </div>
 
-    </section>
     <span id="err" style='display: none;'>Choose at least one ingredient and one base.</span>
   </div>
 </body>

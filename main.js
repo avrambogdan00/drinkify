@@ -1,60 +1,14 @@
 //index.html
 
 window.addEventListener('load', function(event) {
-var baseExist = false;
+  var baseExist = false;
   var ing = [0, 0, 0, 0];
 
-function updateHI(value) {
-  for(var i=0; i<ing.length; i++) {
-      if(ing[i] == 0) {
-        ing[i] = value;
-        var src = document.getElementById('i'+(i+1));
+  function updateHI(value) {
+    document.getElementById('submit').onclick = function() {
+      var i = document.getElementsByName('ing')[0];
 
-        var input = document.getElementsByName('i'+(i+1));
-        input[0].value = value;
-        console.log(value); 
-
-        break;
-      }
-  }
-}
-  function alc() {
-    if (document.cookie == '') {
-      d = new Date();
-      document.cookie = 'over18=;expires=' + d.getTime() + 2592000000;
-    }
-    var cbox = document.getElementById('alcohol');
-    var inp = document.getElementById('alc-range');
-    var btn = document.getElementsByClassName('btn');
-    var v = document.getElementById('slider-value');
-    if (cbox.checked == true) {
-      if(document.cookie == 'over18=' || document.cookie == 'over18=false') {
-        var r = confirm("Press OK if you are 18+");
-        if(r == true) {
-          inp.style.display = 'inline';
-          btn[0].style.display = 'inline';
-          v.style.display = 'inline';
-          document.cookie = 'over18=true';
-        } else {
-          cbox.checked = false;
-        }
-      } else if (document.cookie == 'over18=true') {
-        inp.style.display = 'inline';
-        btn[0].style.display = 'inline';
-        v.style.display = 'inline';
-      }
-    } else{
-      inp.style.display = 'none';
-      btn[0].style.display = 'none';
-      v.style.display = 'none';
-    }
-  }
-
-  function checkforerorrs(){
-    var queryString = decodeURIComponent(window.location.search);
-    queryString = queryString.substring(1);
-    if(queryString == 'e') {
-      document.getElementById('err').style.display = 'block';
+      document.getElementsByClassName('car')[0].style.top += "10%";
     }
   }
 
@@ -80,7 +34,7 @@ function updateHI(value) {
       }
       current = items[counter];
       current.classList.add('current');
-      updateHI(counter);
+      console.log(counter);
     }
     next.addEventListener('click', function(ev) {
       navigate(1);
@@ -94,3 +48,45 @@ function updateHI(value) {
 
   checkforerorrs();
 });
+
+
+
+function alc() {
+  if (document.cookie == '') {
+    d = new Date();
+    document.cookie = 'over18=;expires=' + d.getTime() + 2592000000;
+  }
+  var cbox = document.getElementById('alcohol');
+  var inp = document.getElementById('alc-range');
+  var btn = document.getElementsByClassName('btn');
+  var v = document.getElementById('slider-value');
+  if (cbox.checked == true) {
+    if(document.cookie == 'over18=' || document.cookie == 'over18=false') {
+      var r = confirm("Press OK if you are 18+");
+      if(r == true) {
+        inp.style.display = 'inline';
+        btn[0].style.display = 'inline';
+        v.style.display = 'inline';
+        document.cookie = 'over18=true';
+      } else {
+        cbox.checked = false;
+      }
+    } else if (document.cookie == 'over18=true') {
+      inp.style.display = 'inline';
+      btn[0].style.display = 'inline';
+      v.style.display = 'inline';
+    }
+  } else{
+    inp.style.display = 'none';
+    btn[0].style.display = 'none';
+    v.style.display = 'none';
+  }
+}
+
+function checkforerorrs(){
+  var queryString = decodeURIComponent(window.location.search);
+  queryString = queryString.substring(1);
+  if(queryString == 'e') {
+    document.getElementById('err').style.display = 'block';
+  }
+}
