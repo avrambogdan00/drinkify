@@ -29,13 +29,12 @@
 
     </div>
 
-    <form style="display: none" action="submit.html" method="GET" class="control">
+    <form action="submit.html" method="GET" class="control">
       <input type="hidden" value="" name="ing">
       <input type="hidden" value="" name="b">
       <input type="hidden" value="" name="alc">
       <button type="submit" value="Submit">Submit</button>
       <button type="reset" onclick="window.location.href = 'index.html'" name="Reset">Reset</button>
-      <button type="button" onclick='document.cookie = "over18="; window.location.href="index.html"'>Reset Cookies</button>
     </form>
 
     <div class="opt">
@@ -46,6 +45,8 @@
     </div>
 
     <span id="err" style='display: none;'>Choose at least one ingredient and one base.</span>
+    <button type="button" onclick='document.cookie = "over18="; window.location.href="index.html"'>Reset Cookies</button>
+
   </div>
 </body>
 </html>

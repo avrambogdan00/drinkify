@@ -13,12 +13,10 @@ window.addEventListener('load', function(event) {
     function navigate(direction) {
       current.classList.remove('current');
       counter = counter + direction;
-      if (direction === -1 &&
-      counter < 0) {
+      if (direction === -1 && counter < 0) {
         counter = amount - 1;
       }
-      if (direction === 1 &&
-      !items[counter]) {
+      if (direction === 1 && !items[counter]) {
         counter = 0;
       }
       current = items[counter];
@@ -80,6 +78,24 @@ function checkforerorrs(){
   }
 }
 
+var posIndex = [];
 function updateHI() {
-  var items = document.querySelectorAll(".content li");
+  var car = document.querySelector(".car");
+  if(posIndex.length == 0) {
+    car.style.top = "24.9%";
+    posIndex.push(1);
+  } else if(posIndex.length == 1) {
+    car.style.top = "40.9%";
+    posIndex.push(1);
+  } else if(posIndex.length == 2) {
+    car.style.top = "56.7%";
+    posIndex.push(1);
+  }
+  var current = document.querySelector("li.current");
+  var img = current.innerHTML;
+  var hi = document.querySelector('input[name=ing]');
+  img = img.split("/").pop();
+  img = img.substring(0, img.indexOf('.'));
+  hi.value = hi.value + img + "&";
+  console.log(img + " : " + hi.value);
 }

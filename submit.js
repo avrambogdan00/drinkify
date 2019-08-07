@@ -5,7 +5,7 @@ function getOrder(){
   div = document.getElementsByClassName('order');
   var queryString = decodeURIComponent(window.location.search);
   queryString = queryString.substring(1);
-  var queries = queryString.split("&");
+  var queries = queryString.split("");
 
   var i1 = queries[0].split('='); ingredients = ((i1[1]=='') ? ingredients : ingredients + possibleIng[i1[1]] + '<br>');
   var i2 = queries[1].split('='); ingredients = ((i2[1]=='') ? ingredients : ingredients + possibleIng[i2[1]] + '<br>');
