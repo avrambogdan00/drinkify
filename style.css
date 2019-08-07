@@ -51,7 +51,7 @@
   position: relative;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: #f1f1f1;
+  background-color: #63707e;
   color: black;
   font-size: 16px;
   padding: 16px 30px;
@@ -59,6 +59,7 @@
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
+  
 }
 
 
@@ -88,14 +89,13 @@
   display: inline-block;
 }
 
-span {
+span #err {
   color: red;
   top: 51%;
   position: fixed;
 }
 
 .car {
-  font-family: helvetica,sans-serif;
   font-size: 14px;
   width: 390px;
   position: absolute;
@@ -104,6 +104,7 @@ span {
   top: 8.7%;
   left: 34.79%;
   padding: 0 50px;
+  transition: top 2s;
 }
 
 .active {
