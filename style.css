@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen&display=swap');
+
 .parent{
+  font-family: 'Oxygen', sans-serif;
   display: block;
   max-width: 90%;
   margin-left: auto;
@@ -98,7 +101,7 @@ span {
   margin: 1em;
   overflow: hidden;
   top: 8.7%;
-  left: 34.9%;
+  left: 34.79%;
   padding: 0 50px;
 }
 
@@ -158,9 +161,14 @@ span {
 }
 
 .prev {
-  left: 0;
+  right: 380px;
 }
 
 .next {
-  right: 0;
+  left: 380px;
+}
+
+#submit {
+  position: relative;
+  top: 20px;
 }

@@ -1,17 +1,6 @@
 //index.html
 
 window.addEventListener('load', function(event) {
-  var baseExist = false;
-  var ing = [0, 0, 0, 0];
-
-  function updateHI(value) {
-    document.getElementById('submit').onclick = function() {
-      var i = document.getElementsByName('ing')[0];
-
-      document.getElementsByClassName('car')[0].style.top += "10%";
-    }
-  }
-
   carousel = (function(){
     var box = document.querySelector('.car');
     var next = box.querySelector('.next');
@@ -89,4 +78,8 @@ function checkforerorrs(){
   if(queryString == 'e') {
     document.getElementById('err').style.display = 'block';
   }
+}
+
+function updateHI() {
+  var items = document.querySelectorAll(".content li");
 }
