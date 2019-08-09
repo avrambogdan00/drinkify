@@ -17,6 +17,8 @@ body {
   height: 42px;
   width: 280px;
   position: relative;
+  left: 5%;
+  top: 25px;
 }
 
 #alc-range, .btn {
