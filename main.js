@@ -96,6 +96,12 @@ function updateHI() {
   var hi = document.querySelector('input[name=ing]');
   img = img.split("/").pop();
   img = img.substring(0, img.indexOf('.'));
-  hi.value = hi.value + img + "&";
+  hi.value = hi.value + img + "-";
   console.log(img + " : " + hi.value);
 }
+
+function delIngLastChar() {
+  var ing = document.querySelector('input[name=ing]');
+  ing.value = ing.value.slice(0, -1);
+}
+

@@ -1,51 +1,67 @@
 <html>
-<head>
+  <head>
   <title>Drinkify</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css">
   <script type="text/javascript" src="main.js"></script>
-</head>
-<body>
-  <div onload="checkforerrors()" class="parent">
-    <div id="bottle">
-      <img class="bottle" src="images/simpleMixerBtl.png"/>
-      <div class="car active">
-        <button class="prev">
-          ◀ <span class="offscreen">Previous</span>
-        </button>
-        <ol class="content">
-          <li><img src="images/ice.jpg"></li>
-          <li><img src="images/lemon.jpg"></li>
-          <li><img src="images/banana.jpg"></li>
-          <li><img src="images/coconut.jpg"></li>
-        </ol>
-        <button class="next">
-          <span class="offscreen">Next</span> ▶
-        </button>
-        <button onclick="updateHI()" type="button" id="submit">Continue</button>
+  </head>
+  <body>
+    <div onload="checkforerrors()" class="parent">
+      <div id="bottle">
+        <img class="bottle" src="images/simpleMixerBtl.png"/>
+        <div class="car active">
+          <button class="prev">
+            ◀ <span class="offscreen">Previous</span>
+          </button>
+          <ol class="content">
+            <li><img src="images/ice.jpg"></li>
+            <li><img src="images/lemon.jpg"></li>
+            <li><img src="images/banana.jpg"></li>
+            <li><img src="images/coconut.jpg"></li>
+          </ol>
+          <button class="next">
+            <span class="offscreen">Next</span> ▶
+          </button>
+          <button onclick="updateHI()" type="button" id="submit">Continue</button>
+        </div>
+        <div id="b">
+          <div class="car active b">
+            <button class="prev">
+              ◀ <span class="offscreen">Previous</span>
+            </button>
+            <ol class="content">
+              <li><img src="images/cola1.jpg"></li>
+              <li><img src="images/pepsi.jpg"></li>
+              <li><img src="images/fanta1.jpg"></li>
+              <li><img src="images/scwh1.jpg"></li>
+            </ol>
+            <button class="next">
+              <span class="offscreen">Next</span> ▶
+            </button>
+            <button onclick="updateHI()" type="button" id="submit">Continue</button>
+          </div>
+        </div>
+
       </div>
-      <div id="b"></div>
 
-    </div>
+      <form action="submit.html" method="GET" class="control">
+        <input type="hidden" value="" name="ing">
+        <input type="hidden" value="" name="b">
+        <input type="hidden" value="" name="alc">
+        <button onclick="delIngLastChar()" type="submit" value="Submit">Submit</button>
+        <button type="reset" onclick="window.location.href = 'index.html'" name="Reset">Reset</button>
+      </form>
 
-    <form action="submit.html" method="GET" class="control">
-      <input type="hidden" value="" name="ing">
-      <input type="hidden" value="" name="b">
-      <input type="hidden" value="" name="alc">
-      <button type="submit" value="Submit">Submit</button>
-      <button type="reset" onclick="window.location.href = 'index.html'" name="Reset">Reset</button>
-    </form>
-
-    <div class="opt">
+      <div class="opt">
       <input onclick="alc()" type="checkbox" id="alcohol">Alcohol</input>
       <input oninput="document.getElementById('slider-value').innerHTML = this.value + '%'" class="slider" type="range" id="alc-range" value="5" min="0" max="50">
       <input type="button" class="btn" value="Submit" onclick="document.getElementsByName('alc')[0].value = document.getElementById('alc-range').value;">
       <span id="slider-value">5%</span>
+      </div>
+
+      <span id="err" style='display: none;'>Choose at least one ingredient and one base.</span>
+      <button type="button" onclick='document.cookie = "over18="; window.location.href="index.html"'>Reset Cookies</button>
+
     </div>
-
-    <span id="err" style='display: none;'>Choose at least one ingredient and one base.</span>
-    <button type="button" onclick='document.cookie = "over18="; window.location.href="index.html"'>Reset Cookies</button>
-
-  </div>
-</body>
+  </body>
 </html>

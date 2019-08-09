@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Oxygen&display=swap');
 
-.parent{
+body {
   font-family: 'Oxygen', sans-serif;
+}
+
+.parent{
   display: block;
   max-width: 90%;
   margin-left: auto;
@@ -51,7 +54,7 @@
   position: relative;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: #63707e;
+  background-color: #dcdcdc;
   color: black;
   font-size: 16px;
   padding: 16px 30px;
@@ -135,12 +138,13 @@ span #err {
 }
 
 .active button {
-  padding: 5px 8px;
+  padding: 8px 8px;
   background: #eee;
   text-align: center;
   z-index: 10;
   position: relative;
   font-size: 25px;
+  border-radius: 5px;
 }
 .car button {
   border: none;
@@ -173,4 +177,8 @@ span #err {
 #submit {
   position: relative;
   top: 20px;
+}
+
+.b {
+  top: 70%;
 }
