@@ -45,7 +45,6 @@ function alc() {
   }
   var cbox = document.getElementById('alcohol');
   var inp = document.getElementById('alc-range');
-  var btn = document.getElementsByClassName('btn');
   var v = document.getElementById('slider-value');
   //console.log(cbox + '  ' + inp + '  ' + btn + '  ' + v);
   if (cbox.checked == true) {
@@ -54,7 +53,6 @@ function alc() {
       var r = confirm("Press OK if you are 18+");
       if(r == true) {
         inp.style.display = 'inline';
-        btn[0].style.display = 'inline';
         v.style.display = 'inline';
         document.cookie = 'over18=true';
       } else {
@@ -62,12 +60,10 @@ function alc() {
       }
     } else if (document.cookie == 'over18=true') {
       inp.style.display = 'inline';
-      btn[0].style.display = 'inline';
       v.style.display = 'inline';
     }
   } else{
     inp.style.display = 'none';
-    btn[0].style.display = 'none';
     v.style.display = 'none';
   }
 }
