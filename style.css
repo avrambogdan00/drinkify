@@ -14,9 +14,9 @@ body {
 /*   Alcohol   */
 .opt {
   font-size: 20px;
-  padding: 20px;
-  padding-right: 50px;
   height: 42px;
+  width: 280px;
+  position: relative;
 }
 
 #alc-range, .btn {
@@ -48,7 +48,7 @@ body {
   z-index: 1000;
 }
 
-.control button {
+.control button, .res {
   position: relative;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
