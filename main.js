@@ -107,3 +107,11 @@ function delIngLastChar() {
   ing.value = ing.value.slice(0, -1);
 }
 
+function updateAlc() {
+  var slider = document.querySelector('#alc-range');
+  var span = document.querySelector('span#slider-value');
+  var hi = document.querySelector('input[name=alc]');
+
+  span.innerHTML = slider.value.toString();
+  hi.value = slider.value.toString();
+}
