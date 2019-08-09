@@ -47,7 +47,9 @@ function alc() {
   var inp = document.getElementById('alc-range');
   var btn = document.getElementsByClassName('btn');
   var v = document.getElementById('slider-value');
+  //console.log(cbox + '  ' + inp + '  ' + btn + '  ' + v);
   if (cbox.checked == true) {
+    console.log('checked');
     if(document.cookie == 'over18=' || document.cookie == 'over18=false') {
       var r = confirm("Press OK if you are 18+");
       if(r == true) {
