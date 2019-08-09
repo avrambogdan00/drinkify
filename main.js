@@ -108,6 +108,6 @@ function updateAlc() {
   var span = document.querySelector('span#slider-value');
   var hi = document.querySelector('input[name=alc]');
 
-  span.innerHTML = slider.value.toString();
+  span.innerHTML = slider.value.toString() + '%';
   hi.value = slider.value.toString();
 }
